@@ -13,9 +13,3 @@ o
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 t
 Dsrc/main/java/com/amsidh/vertx/service/impl/CustomerServiceImpl.java,c\4\c4d38d7876ffe8c9b4ce2d3193838bf1e754059b
-t
-Dsrc/main/java/com/amsidh/vertx/resource/CustomerRestApiVerticle.java,7\5\75d1e76ae0b27f1a29574c3a3e3089b15a223daf
-s
-Csrc/main/java/com/amsidh/vertx/handlers/GetAllCustomersHandler.java,0\f\0fd7b5e4f05f2b498bb7494211e6010548cff7fd
-`
-0src/main/java/com/amsidh/vertx/MainVerticle.java,f\4\f4c7fc145dc929b778484542433b565f62d91293
