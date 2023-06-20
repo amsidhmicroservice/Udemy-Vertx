@@ -11,11 +11,6 @@ import java.util.Random;
 public class MainVerticle extends AbstractVerticle {
   private static final Logger LOGGER = LoggerFactory.getLogger(MainVerticle.class);
 
-  public static void main(String[] args) {
-    Vertx vertx = Vertx.vertx();
-    vertx.deployVerticle(MainVerticle.class.getName());
-  }
-
   @Override
   public void start(Promise<Void> startPromise) throws Exception {
     vertx.createHttpServer().requestHandler(req -> {
@@ -30,8 +25,11 @@ public class MainVerticle extends AbstractVerticle {
         startPromise.fail(http.cause());
       }
     });
-    vertx.setPeriodic(500, id -> {
+    vertx.setPeriodic(100, id -> {
       LOGGER.info("Redeploy " + new Random().nextDouble());
     });
+
+
   }
+
 }
