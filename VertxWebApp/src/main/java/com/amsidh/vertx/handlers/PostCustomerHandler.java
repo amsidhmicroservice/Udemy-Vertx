@@ -13,6 +13,8 @@ import io.vertx.core.json.JsonObject;
 import io.vertx.ext.web.RoutingContext;
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.Optional;
+
 @Slf4j
 public class PostCustomerHandler implements Handler<RoutingContext> {
     CustomerService customerService = new CustomerServiceImpl();
@@ -20,8 +22,13 @@ public class PostCustomerHandler implements Handler<RoutingContext> {
     public void handle(RoutingContext routingContext) {
         JsonObject requestBody = routingContext.getBodyAsJson();
         Customer customer = requestBody.mapTo(Customer.class);
-        Customer savedCustomer = customerService.saveCustomer(customer);
-        JsonObject response = new JsonObject(Json.encode(savedCustomer));
+        Optional<Customer> optionalCustomer = customerService.saveCustomer(customer);
+        JsonObject response;
+        if(optionalCustomer.isPresent()) {
+            response = new JsonObject(Json.encode(optionalCustomer.get()));
+        }else {
+            response = new JsonObject().put("message", "Customer not saved ");
+        }
         log.info("Request {} and Response {} ", routingContext.normalizedPath(), response.encode());
         routingContext.response()
                 .putHeader(HttpHeaders.CONTENT_TYPE, HttpHeaderValues.APPLICATION_JSON)

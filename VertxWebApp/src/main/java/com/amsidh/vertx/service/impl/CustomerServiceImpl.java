@@ -23,32 +23,44 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public Customer saveCustomer(Customer customer) {
-        if (customers.get(customer.getId()) == null) {
-            customers.put(customer.getId(), customer);
-            return customers.get(customer.getId());
+    public Optional<Customer> saveCustomer(Customer customer) {
+        Optional<Customer> optionalCustomer = getCustomerById(customer.getId());
+        if (optionalCustomer.isPresent()) {
+            return optionalCustomer;
         } else {
-            throw new RuntimeException("Customer with id " + customer.getId() + "is already present");
+            customers.put(customer.getId(), customer);
+            return Optional.ofNullable(customer);
         }
     }
 
     @Override
-    public Customer getCustomerById(Integer id) {
-        return Optional.ofNullable(customers.get(id)).orElseThrow(() -> new RuntimeException("Customer with id " + id + " not found"));
+    public Optional<Customer> getCustomerById(Integer id) {
+        return Optional.ofNullable(customers.get(id));
     }
 
 
     @Override
-    public Customer updateCustomer(Integer id, Customer customer) {
-        Customer oldCustomer = getCustomerById(id);
-        Optional.ofNullable(customer.getId()).ifPresent(oldCustomer::setId);
-        Optional.ofNullable(customer.getName()).ifPresent(oldCustomer::setName);
-        return customers.put(id, oldCustomer);
+    public Optional<Customer> updateCustomer(Integer id, Customer customer) {
+        Optional<Customer> optionalCustomer = getCustomerById(id);
+        if (optionalCustomer.isPresent()) {
+            Customer oldCustomer = optionalCustomer.get();
+            Optional.ofNullable(customer.getId()).ifPresent(oldCustomer::setId);
+            Optional.ofNullable(customer.getName()).ifPresent(oldCustomer::setName);
+            customers.put(id, oldCustomer);
+            return optionalCustomer;
+        } else {
+            return optionalCustomer;
+        }
+
     }
 
     @Override
-    public void deleteCustomerById(Integer id) {
-        customers.remove(getCustomerById(id).getId());
+    public Optional<Customer> deleteCustomerById(Integer id) {
+        Optional<Customer> optionalCustomer = getCustomerById(id);
+        if (optionalCustomer.isPresent()) {
+            customers.remove(optionalCustomer.get().getId());
+        }
+        return optionalCustomer;
     }
 
     @Override

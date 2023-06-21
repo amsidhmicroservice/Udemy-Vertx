@@ -22,11 +22,13 @@ public class GetAllCustomersHandler implements Handler<RoutingContext> {
 
     @Override
     public void handle(RoutingContext routingContext) {
-        manuallyDelaying(routingContext);
-        /*log.info("Request {} and Response {} ", routingContext.normalizedPath(), response.encode());
+        List<Customer> customers = customerService.getAllCustomer();
+        JsonArray response = new JsonArray(customers);
+        //manuallyDelaying(routingContext);
+        log.info("Request {} and Response {} ", routingContext.normalizedPath(), response.encode());
         routingContext.response()
                 .putHeader(HttpHeaders.CONTENT_TYPE, HttpHeaderValues.APPLICATION_JSON)
-                .end(response.encodePrettily());*/
+                .end(response.encodePrettily());
     }
 
     private void manuallyDelaying(RoutingContext routingContext) {

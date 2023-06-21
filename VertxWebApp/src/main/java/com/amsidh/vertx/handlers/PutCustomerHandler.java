@@ -11,6 +11,8 @@ import io.vertx.core.json.JsonObject;
 import io.vertx.ext.web.RoutingContext;
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.Optional;
+
 @Slf4j
 public class PutCustomerHandler implements Handler<RoutingContext> {
     CustomerService customerService = new CustomerServiceImpl();
@@ -20,8 +22,14 @@ public class PutCustomerHandler implements Handler<RoutingContext> {
         String id = routingContext.pathParam("id");
         JsonObject jsonObject = routingContext.getBodyAsJson();
         Customer customer = jsonObject.mapTo(Customer.class);
-        Customer updatedCustomer = customerService.updateCustomer(Integer.parseInt(id), customer);
-        JsonObject response = new JsonObject(Json.encode(updatedCustomer));
+        Optional<Customer> optionalCustomer = customerService.updateCustomer(Integer.parseInt(id), customer);
+        JsonObject response;
+        if (optionalCustomer.isPresent()) {
+            response = new JsonObject(Json.encode(optionalCustomer.get()));
+        } else {
+            response = new JsonObject();
+            response.put("message", "Customer with id " + id + " does not exists!!!");
+        }
         log.info("Request {} and Response {} ", routingContext.normalizedPath(), response.encode());
         routingContext.response()
                 .putHeader(HttpHeaders.CONTENT_TYPE, HttpHeaderValues.APPLICATION_JSON)

@@ -3,15 +3,16 @@ package com.amsidh.vertx.service;
 import com.amsidh.vertx.model.Customer;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface CustomerService {
-    Customer saveCustomer(Customer customer);
+    Optional<Customer> saveCustomer(Customer customer);
 
-    Customer getCustomerById(Integer id);
+    Optional<Customer> getCustomerById(Integer id);
 
-    Customer updateCustomer(Integer id, Customer customer);
+    Optional<Customer> updateCustomer(Integer id, Customer customer);
 
-    void deleteCustomerById(Integer id);
+    Optional<Customer> deleteCustomerById(Integer id);
 
     List<Customer> getAllCustomer();
 

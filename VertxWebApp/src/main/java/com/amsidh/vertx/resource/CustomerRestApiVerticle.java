@@ -1,6 +1,7 @@
 package com.amsidh.vertx.resource;
 
 import com.amsidh.vertx.handlers.*;
+import io.netty.handler.codec.http.HttpResponseStatus;
 import io.vertx.core.AbstractVerticle;
 import io.vertx.core.Handler;
 import io.vertx.core.Promise;
@@ -14,6 +15,8 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class CustomerRestApiVerticle extends AbstractVerticle {
 
+    public static final int PORT = 80;
+
     @Override
     public void start(Promise<Void> startPromise) throws Exception {
         HttpServer httpServer = vertx.createHttpServer();
@@ -22,6 +25,7 @@ public class CustomerRestApiVerticle extends AbstractVerticle {
         router.route()
                 .handler(BodyHandler.create())
                 .failureHandler(handleFailure());
+
         //Get All Customers
         router.get("/customers").handler(new GetAllCustomersHandler());
         //Get Customer By id
@@ -35,7 +39,7 @@ public class CustomerRestApiVerticle extends AbstractVerticle {
 
         httpServer.requestHandler(router)
                 .exceptionHandler(error -> log.error("HTTP Server error: ", error))
-                .listen(80, httpServerAsyncResult -> {
+                .listen(PORT, httpServerAsyncResult -> {
                     if (httpServerAsyncResult.succeeded()) {
                         startPromise.complete();
                         log.info("HTTP server started on port {}", httpServer.actualPort());
@@ -54,7 +58,7 @@ public class CustomerRestApiVerticle extends AbstractVerticle {
             }
             log.error("Route Error:", errorContext.failure());
             errorContext.response()
-                    .setStatusCode(500)
+                    .setStatusCode(HttpResponseStatus.INTERNAL_SERVER_ERROR.code())
                     .end(new JsonObject().put("message", "Something went wrong :(").toBuffer());
         };
     }
