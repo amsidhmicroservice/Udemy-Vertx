@@ -102,4 +102,21 @@ public class CustomerRestApiVerticleTest {
                     return Future.succeededFuture();
                 });
     }
+
+    @Test
+    public void deleteCustomerByIdTest(Vertx vertx, VertxTestContext vertxTestContext) {
+        WebClient webClient = WebClient.create(vertx, new WebClientOptions().setDefaultPort(CustomerRestApiVerticle.PORT));
+        webClient.delete("/customers/1").send().onSuccess(successHandler -> {
+            Assertions.assertEquals(HttpResponseStatus.OK.code(), successHandler.statusCode());
+            Assertions.assertEquals(HttpHeaderValues.APPLICATION_JSON.toString(), successHandler.getHeader(HttpHeaderNames.CONTENT_TYPE.toString()));
+            Assertions.assertEquals("{\"message\":\"Customer with id 1 deleted successfully!!!\"}", successHandler.bodyAsJsonObject().encode());
+        }).compose(next -> {
+            webClient.delete("/customers/100").send().onSuccess(bufferHttpResponse -> {
+                Assertions.assertEquals(HttpResponseStatus.OK.code(), bufferHttpResponse.statusCode());
+                Assertions.assertEquals("{\"message\":\"Customer with id 100 does not exists!!!\"}", bufferHttpResponse.bodyAsJsonObject().encode());
+                vertxTestContext.completeNow();
+            });
+            return Future.succeededFuture();
+        });
+    }
 }

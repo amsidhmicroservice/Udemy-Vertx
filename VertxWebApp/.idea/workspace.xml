@@ -65,7 +65,7 @@
       <recent name="com.amsidh.vertx.handlers" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CustomerRestApiVerticleTest.putCustomerTest">
+  <component name="RunManager" selected="JUnit.CustomerRestApiVerticleTest.deleteCustomerByIdTest">
     <configuration name="MainVerticleLauncher" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="io.vertx.core.Launcher" />
       <module name="VertxWebApp" />
@@ -90,7 +90,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomerRestApiVerticleTest.customerNotFoundById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CustomerRestApiVerticleTest.deleteCustomerByIdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="VertxWebApp" />
       <extension name="coverage">
         <pattern>
@@ -100,7 +100,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.amsidh.vertx.resource" />
       <option name="MAIN_CLASS_NAME" value="com.amsidh.vertx.resource.CustomerRestApiVerticleTest" />
-      <option name="METHOD_NAME" value="customerNotFoundById(io.vertx.core.Vertx,io.vertx.junit5.VertxTestContext)" />
+      <option name="METHOD_NAME" value="deleteCustomerByIdTest(io.vertx.core.Vertx,io.vertx.junit5.VertxTestContext)" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -156,11 +156,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CustomerRestApiVerticleTest.deleteCustomerByIdTest" />
         <item itemvalue="JUnit.CustomerRestApiVerticleTest.putCustomerTest" />
         <item itemvalue="JUnit.CustomerRestApiVerticleTest" />
         <item itemvalue="JUnit.CustomerRestApiVerticleTest.saveCustomerTest" />
         <item itemvalue="JUnit.CustomerRestApiVerticleTest.getCustomerById" />
-        <item itemvalue="JUnit.CustomerRestApiVerticleTest.customerNotFoundById" />
       </list>
     </recent_temporary>
   </component>
@@ -173,7 +173,7 @@
       <option name="presentableId" value="Default" />
       <updated>1687268480982</updated>
       <workItem from="1687268481993" duration="9891000" />
-      <workItem from="1687278426433" duration="10336000" />
+      <workItem from="1687278426433" duration="11575000" />
     </task>
     <servers />
   </component>
@@ -205,6 +205,11 @@
           <url>file://$PROJECT_DIR$/src/test/java/com/amsidh/vertx/resource/CustomerRestApiVerticleTest.java</url>
           <line>73</line>
           <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/amsidh/vertx/resource/CustomerRestApiVerticleTest.java</url>
+          <line>115</line>
+          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
