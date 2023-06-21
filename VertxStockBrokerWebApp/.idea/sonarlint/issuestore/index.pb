@@ -7,3 +7,13 @@ k
 ;src/main/java/com/amsidh/vertx/resources/QuataResource.java,0\0\0021fc867c54c1d75604452934de6b5970b8f4ab
 o
 ?src/test/java/com/amsidh/vertx/resources/QuataResourceTest.java,5\7\57163bfca6bbf38a640e3fbaecb0d1f1b5c12e51
+7
+pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
+`
+0src/main/java/com/amsidh/vertx/MainVerticle.java,f\4\f4c7fc145dc929b778484542433b565f62d91293
+k
+;src/main/java/com/amsidh/vertx/resources/AssetResource.java,7\6\769cc167ee471f827e02a4732a16b8e3ef43b464
+d
+4src/test/java/com/amsidh/vertx/TestMainVerticle.java,9\f\9f43b323ea204a58ff1f5088181a2c37ca22c892
+o
+?src/test/java/com/amsidh/vertx/resources/AssetResourceTest.java,5\2\52e147101c483524ce679728af71e5fdb8ad7c16

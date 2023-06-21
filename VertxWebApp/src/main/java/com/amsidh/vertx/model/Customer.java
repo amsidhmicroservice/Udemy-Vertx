@@ -11,7 +11,7 @@ import java.io.Serializable;
 @EqualsAndHashCode
 @ToString
 public class Customer implements Serializable {
-    private Integer id;
+    private Long id;
     private String name;
 }
 

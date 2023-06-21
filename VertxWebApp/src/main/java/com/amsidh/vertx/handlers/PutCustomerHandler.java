@@ -22,7 +22,7 @@ public class PutCustomerHandler implements Handler<RoutingContext> {
         String id = routingContext.pathParam("id");
         JsonObject jsonObject = routingContext.getBodyAsJson();
         Customer customer = jsonObject.mapTo(Customer.class);
-        Optional<Customer> optionalCustomer = customerService.updateCustomer(Integer.parseInt(id), customer);
+        Optional<Customer> optionalCustomer = customerService.updateCustomer(Long.parseLong(id), customer);
         JsonObject response;
         if (optionalCustomer.isPresent()) {
             response = new JsonObject(Json.encode(optionalCustomer.get()));

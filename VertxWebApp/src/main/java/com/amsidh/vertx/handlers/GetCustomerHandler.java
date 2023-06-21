@@ -21,7 +21,7 @@ public class GetCustomerHandler implements Handler<RoutingContext> {
     @Override
     public void handle(RoutingContext routingContext) {
         String id = routingContext.pathParam("id");
-        Optional<Customer> customerOptional = customerService.getCustomerById(Integer.parseInt(id));
+        Optional<Customer> customerOptional = customerService.getCustomerById(Long.parseLong(id));
         JsonObject response;
         if (customerOptional.isPresent()) {
             response = new JsonObject(Json.encode(customerOptional.get()));

@@ -13,13 +13,13 @@ import java.util.stream.Collectors;
 @Slf4j
 public class CustomerServiceImpl implements CustomerService {
 
-    private static final Map<Integer, Customer> customers = new HashMap<>();
+    private static final Map<Long, Customer> customers = new HashMap<>();
 
     static {
-        customers.put(1, Customer.builder().id(1).name("Amsidh").build());
-        customers.put(2, Customer.builder().id(2).name("Anjali").build());
-        customers.put(3, Customer.builder().id(3).name("Aditya").build());
-        customers.put(4, Customer.builder().id(4).name("Adithi").build());
+        customers.put(1L, Customer.builder().id(1L).name("Amsidh").build());
+        customers.put(2L, Customer.builder().id(2L).name("Anjali").build());
+        customers.put(3L, Customer.builder().id(3L).name("Aditya").build());
+        customers.put(4L, Customer.builder().id(4L).name("Adithi").build());
     }
 
     @Override
@@ -34,13 +34,13 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public Optional<Customer> getCustomerById(Integer id) {
+    public Optional<Customer> getCustomerById(Long id) {
         return Optional.ofNullable(customers.get(id));
     }
 
 
     @Override
-    public Optional<Customer> updateCustomer(Integer id, Customer customer) {
+    public Optional<Customer> updateCustomer(Long id, Customer customer) {
         Optional<Customer> optionalCustomer = getCustomerById(id);
         if (optionalCustomer.isPresent()) {
             Customer oldCustomer = optionalCustomer.get();
@@ -55,7 +55,7 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public Optional<Customer> deleteCustomerById(Integer id) {
+    public Optional<Customer> deleteCustomerById(Long id) {
         Optional<Customer> optionalCustomer = getCustomerById(id);
         if (optionalCustomer.isPresent()) {
             customers.remove(optionalCustomer.get().getId());

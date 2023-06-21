@@ -8,11 +8,11 @@ import java.util.Optional;
 public interface CustomerService {
     Optional<Customer> saveCustomer(Customer customer);
 
-    Optional<Customer> getCustomerById(Integer id);
+    Optional<Customer> getCustomerById(Long id);
 
-    Optional<Customer> updateCustomer(Integer id, Customer customer);
+    Optional<Customer> updateCustomer(Long id, Customer customer);
 
-    Optional<Customer> deleteCustomerById(Integer id);
+    Optional<Customer> deleteCustomerById(Long id);
 
     List<Customer> getAllCustomer();
 

@@ -17,7 +17,7 @@ public class DeleteCustomerHandler implements Handler<RoutingContext> {
     @Override
     public void handle(RoutingContext routingContext) {
         String id = routingContext.pathParam("id");
-        Optional<Customer> optionalCustomer = customerService.deleteCustomerById(Integer.parseInt(id));
+        Optional<Customer> optionalCustomer = customerService.deleteCustomerById(Long.parseLong(id));
         JsonObject response = new JsonObject();
         if (optionalCustomer.isPresent()) {
             response.put("message", "Customer with id " + id + " deleted successfully!!!");

@@ -44,10 +44,10 @@ public class CustomerRestApiVerticleTest {
     @Test
     public void getCustomerByIdTest(Vertx vertx, VertxTestContext vertxTestContext) {
         WebClient webClient = WebClient.create(vertx, new WebClientOptions().setDefaultPort(CustomerRestApiVerticle.PORT));
-        webClient.get("/customers/1").send().onSuccess(successHandler -> {
+        webClient.get("/customers/4").send().onSuccess(successHandler -> {
             Assertions.assertEquals(HttpResponseStatus.OK.code(), successHandler.statusCode());
             Assertions.assertEquals(HttpHeaderValues.APPLICATION_JSON.toString(), successHandler.getHeader(HttpHeaderNames.CONTENT_TYPE.toString()));
-            Assertions.assertEquals("{\"id\":1,\"name\":\"Amsidh\"}", successHandler.bodyAsJsonObject().encode());
+            Assertions.assertEquals("{\"id\":4,\"name\":\"Adithi\"}", successHandler.bodyAsJsonObject().encode());
         }).compose(next -> {
             webClient.get("/customers/100").send().onSuccess(bufferHttpResponse -> {
                 Assertions.assertEquals(HttpResponseStatus.OK.code(), bufferHttpResponse.statusCode());
@@ -61,7 +61,7 @@ public class CustomerRestApiVerticleTest {
     @Test
     public void saveCustomerTest(Vertx vertx, VertxTestContext vertxTestContext) {
         WebClient webClient = WebClient.create(vertx, new WebClientOptions().setDefaultPort(CustomerRestApiVerticle.PORT));
-        final Customer customer = Customer.builder().id(100).name("HundredCustomer").build();
+        final Customer customer = Customer.builder().id(100L).name("HundredCustomer").build();
         webClient.post("/customers")
                 .putHeader(HttpHeaderNames.CONTENT_TYPE.toString(), HttpHeaderValues.APPLICATION_JSON.toString())
                 .sendBuffer(JsonObject.mapFrom(customer).toBuffer())
@@ -82,7 +82,7 @@ public class CustomerRestApiVerticleTest {
     @Test
     public void putCustomerTest(Vertx vertx, VertxTestContext vertxTestContext) {
         WebClient webClient = WebClient.create(vertx, new WebClientOptions().setDefaultPort(CustomerRestApiVerticle.PORT));
-        final Customer customer = Customer.builder().id(1).name("Amsidh Babasha Lokhande").build();
+        final Customer customer = Customer.builder().id(1L).name("Amsidh Babasha Lokhande").build();
         webClient.put("/customers/1")
                 .putHeader(HttpHeaderNames.CONTENT_TYPE.toString(), HttpHeaderValues.APPLICATION_JSON.toString())
                 .sendBuffer(JsonObject.mapFrom(customer).toBuffer())
