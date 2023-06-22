@@ -1,5 +1,5 @@
 server:
-  port: 8989
+  port: 80
 application:
   name: VertxWebApp
   version: 1.0.0

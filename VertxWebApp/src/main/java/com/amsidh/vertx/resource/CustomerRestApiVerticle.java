@@ -16,8 +16,6 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class CustomerRestApiVerticle extends AbstractVerticle {
 
-    public static final int PORT = 80;
-
     @Override
     public void start(Promise<Void> startPromise) throws Exception {
         Router router = Router.router(vertx);
@@ -47,7 +45,7 @@ public class CustomerRestApiVerticle extends AbstractVerticle {
     }
 
     private void startHttpServer(Promise<Void> startPromise, Router router, JsonObject configuration) {
-        Integer serverPort = configuration.getInteger(ConfigLoader.SERVER_PORT);
+        Integer serverPort = configuration.getJsonObject("server").getInteger("port");
 
         HttpServer httpServer = vertx.createHttpServer();
         httpServer.requestHandler(router)
