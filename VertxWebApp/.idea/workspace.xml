@@ -65,7 +65,11 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.amsidh.vertx.config" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\amsid\Downloads\Udemy-Vertx\VertxWebApp" />
       <recent name="C:\Users\amsid\Downloads\Udemy-Vertx\VertxWebApp\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -74,6 +78,9 @@
   </component>
   <component name="RunManager" selected="Application.MainVerticleLauncher">
     <configuration name="MainVerticleLauncher" type="Application" factoryName="Application">
+      <envs>
+        <env name="SERVER_PORT" value="8888" />
+      </envs>
       <option name="MAIN_CLASS_NAME" value="io.vertx.core.Launcher" />
       <module name="VertxWebApp" />
       <option name="PROGRAM_PARAMETERS" value="run com.amsidh.vertx.MainVerticle" />
@@ -81,7 +88,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomerRestApiVerticleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CustomerRestApiVerticleTestAbstract" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="VertxWebApp" />
       <extension name="coverage">
         <pattern>
@@ -90,14 +97,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.amsidh.vertx.resource" />
-      <option name="MAIN_CLASS_NAME" value="com.amsidh.vertx.resource.CustomerRestApiVerticleTest" />
+      <option name="MAIN_CLASS_NAME" value="com.amsidh.vertx.resource.CustomerRestApiVerticleTestAbstract" />
       <option name="METHOD_NAME" value="saveCustomerTest(io.vertx.core.Vertx,io.vertx.junit5.VertxTestContext)" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomerRestApiVerticleTest.deleteCustomerByIdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CustomerRestApiVerticleTestAbstract.deleteCustomerByIdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="VertxWebApp" />
       <extension name="coverage">
         <pattern>
@@ -106,14 +113,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.amsidh.vertx.resource" />
-      <option name="MAIN_CLASS_NAME" value="com.amsidh.vertx.resource.CustomerRestApiVerticleTest" />
+      <option name="MAIN_CLASS_NAME" value="com.amsidh.vertx.resource.CustomerRestApiVerticleTestAbstract" />
       <option name="METHOD_NAME" value="deleteCustomerByIdTest(io.vertx.core.Vertx,io.vertx.junit5.VertxTestContext)" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomerRestApiVerticleTest.getCustomerByIdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CustomerRestApiVerticleTestAbstract.getCustomerByIdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="VertxWebApp" />
       <extension name="coverage">
         <pattern>
@@ -122,14 +129,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.amsidh.vertx.resource" />
-      <option name="MAIN_CLASS_NAME" value="com.amsidh.vertx.resource.CustomerRestApiVerticleTest" />
+      <option name="MAIN_CLASS_NAME" value="com.amsidh.vertx.resource.CustomerRestApiVerticleTestAbstract" />
       <option name="METHOD_NAME" value="getCustomerByIdTest(io.vertx.core.Vertx,io.vertx.junit5.VertxTestContext)" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomerRestApiVerticleTest.putCustomerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CustomerRestApiVerticleTestAbstract.putCustomerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="VertxWebApp" />
       <extension name="coverage">
         <pattern>
@@ -138,14 +145,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.amsidh.vertx.resource" />
-      <option name="MAIN_CLASS_NAME" value="com.amsidh.vertx.resource.CustomerRestApiVerticleTest" />
+      <option name="MAIN_CLASS_NAME" value="com.amsidh.vertx.resource.CustomerRestApiVerticleTestAbstract" />
       <option name="METHOD_NAME" value="putCustomerTest(io.vertx.core.Vertx,io.vertx.junit5.VertxTestContext)" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomerRestApiVerticleTest.saveCustomerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CustomerRestApiVerticleTestAbstract.saveCustomerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="VertxWebApp" />
       <extension name="coverage">
         <pattern>
@@ -154,20 +161,28 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.amsidh.vertx.resource" />
-      <option name="MAIN_CLASS_NAME" value="com.amsidh.vertx.resource.CustomerRestApiVerticleTest" />
+      <option name="MAIN_CLASS_NAME" value="com.amsidh.vertx.resource.CustomerRestApiVerticleTestAbstract" />
       <option name="METHOD_NAME" value="saveCustomerTest(io.vertx.core.Vertx,io.vertx.junit5.VertxTestContext)" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.MainVerticleLauncher" />
+      <item itemvalue="JUnit.CustomerRestApiVerticleTestAbstract" />
+      <item itemvalue="JUnit.CustomerRestApiVerticleTestAbstract.deleteCustomerByIdTest" />
+      <item itemvalue="JUnit.CustomerRestApiVerticleTestAbstract.getCustomerByIdTest" />
+      <item itemvalue="JUnit.CustomerRestApiVerticleTestAbstract.putCustomerTest" />
+      <item itemvalue="JUnit.CustomerRestApiVerticleTestAbstract.saveCustomerTest" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CustomerRestApiVerticleTest" />
-        <item itemvalue="JUnit.CustomerRestApiVerticleTest.getCustomerByIdTest" />
-        <item itemvalue="JUnit.CustomerRestApiVerticleTest.deleteCustomerByIdTest" />
-        <item itemvalue="JUnit.CustomerRestApiVerticleTest.putCustomerTest" />
-        <item itemvalue="JUnit.CustomerRestApiVerticleTest.saveCustomerTest" />
+        <item itemvalue="JUnit.CustomerRestApiVerticleTestAbstract" />
+        <item itemvalue="JUnit.CustomerRestApiVerticleTestAbstract.getCustomerByIdTest" />
+        <item itemvalue="JUnit.CustomerRestApiVerticleTestAbstract.deleteCustomerByIdTest" />
+        <item itemvalue="JUnit.CustomerRestApiVerticleTestAbstract.putCustomerTest" />
+        <item itemvalue="JUnit.CustomerRestApiVerticleTestAbstract.saveCustomerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -180,7 +195,7 @@
       <option name="presentableId" value="Default" />
       <updated>1687268480982</updated>
       <workItem from="1687268481993" duration="9891000" />
-      <workItem from="1687278426433" duration="19928000" />
+      <workItem from="1687278426433" duration="29932000" />
     </task>
     <servers />
   </component>
@@ -194,29 +209,34 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/amsidh/vertx/resource/CustomerRestApiVerticleTest.java</url>
-          <line>36</line>
+          <url>file://$PROJECT_DIR$/src/test/java/com/amsidh/vertx/resource/CustomerRestApiVerticleTestAbstract.java</url>
+          <line>22</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/amsidh/vertx/resource/CustomerRestApiVerticleTest.java</url>
-          <line>53</line>
+          <url>file://$PROJECT_DIR$/src/test/java/com/amsidh/vertx/resource/CustomerRestApiVerticleTestAbstract.java</url>
+          <line>38</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/amsidh/vertx/resource/CustomerRestApiVerticleTest.java</url>
-          <line>70</line>
+          <url>file://$PROJECT_DIR$/src/test/java/com/amsidh/vertx/resource/CustomerRestApiVerticleTestAbstract.java</url>
+          <line>54</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/amsidh/vertx/resource/CustomerRestApiVerticleTest.java</url>
-          <line>73</line>
+          <url>file://$PROJECT_DIR$/src/test/java/com/amsidh/vertx/resource/CustomerRestApiVerticleTestAbstract.java</url>
+          <line>57</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/amsidh/vertx/resource/CustomerRestApiVerticleTest.java</url>
-          <line>115</line>
+          <url>file://$PROJECT_DIR$/src/test/java/com/amsidh/vertx/resource/CustomerRestApiVerticleTestAbstract.java</url>
+          <line>97</line>
           <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/amsidh/vertx/resource/CustomerRestApiVerticle.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

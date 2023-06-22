@@ -1,6 +1,5 @@
 package com.amsidh.vertx.resource;
 
-import com.amsidh.vertx.MainVerticle;
 import com.amsidh.vertx.model.Customer;
 import io.netty.handler.codec.http.HttpHeaderNames;
 import io.netty.handler.codec.http.HttpHeaderValues;
@@ -8,26 +7,13 @@ import io.netty.handler.codec.http.HttpResponseStatus;
 import io.vertx.core.Future;
 import io.vertx.core.Vertx;
 import io.vertx.core.json.JsonObject;
-import io.vertx.ext.web.client.WebClient;
-import io.vertx.ext.web.client.WebClientOptions;
-import io.vertx.junit5.VertxExtension;
 import io.vertx.junit5.VertxTestContext;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 
-@ExtendWith(VertxExtension.class)
-public class CustomerRestApiVerticleTest {
-
-    @BeforeEach
-    void deploy_verticle(Vertx vertx, VertxTestContext testContext) {
-        vertx.deployVerticle(new MainVerticle(), testContext.succeeding(id -> testContext.completeNow()));
-    }
-
+public class CustomerRestApiVerticleTestAbstract extends AbstractBaseTest {
     @Test
     public void getAllCustomerTest(Vertx vertx, VertxTestContext vertxTestContext) {
-        WebClient webClient = WebClient.create(vertx, new WebClientOptions().setDefaultPort(CustomerRestApiVerticle.PORT));
         webClient.get("/customers").send().onSuccess(successHandler -> {
             Assertions.assertEquals(HttpResponseStatus.OK.code(), successHandler.statusCode());
             Assertions.assertEquals(HttpHeaderValues.APPLICATION_JSON.toString(), successHandler.getHeader(HttpHeaderNames.CONTENT_TYPE.toString()));
@@ -43,7 +29,6 @@ public class CustomerRestApiVerticleTest {
 
     @Test
     public void getCustomerByIdTest(Vertx vertx, VertxTestContext vertxTestContext) {
-        WebClient webClient = WebClient.create(vertx, new WebClientOptions().setDefaultPort(CustomerRestApiVerticle.PORT));
         webClient.get("/customers/4").send().onSuccess(successHandler -> {
             Assertions.assertEquals(HttpResponseStatus.OK.code(), successHandler.statusCode());
             Assertions.assertEquals(HttpHeaderValues.APPLICATION_JSON.toString(), successHandler.getHeader(HttpHeaderNames.CONTENT_TYPE.toString()));
@@ -60,7 +45,6 @@ public class CustomerRestApiVerticleTest {
 
     @Test
     public void saveCustomerTest(Vertx vertx, VertxTestContext vertxTestContext) {
-        WebClient webClient = WebClient.create(vertx, new WebClientOptions().setDefaultPort(CustomerRestApiVerticle.PORT));
         final Customer customer = Customer.builder().id(100L).name("HundredCustomer").build();
         webClient.post("/customers")
                 .putHeader(HttpHeaderNames.CONTENT_TYPE.toString(), HttpHeaderValues.APPLICATION_JSON.toString())
@@ -81,7 +65,6 @@ public class CustomerRestApiVerticleTest {
 
     @Test
     public void putCustomerTest(Vertx vertx, VertxTestContext vertxTestContext) {
-        WebClient webClient = WebClient.create(vertx, new WebClientOptions().setDefaultPort(CustomerRestApiVerticle.PORT));
         final Customer customer = Customer.builder().id(1L).name("Amsidh Babasha Lokhande").build();
         webClient.put("/customers/1")
                 .putHeader(HttpHeaderNames.CONTENT_TYPE.toString(), HttpHeaderValues.APPLICATION_JSON.toString())
@@ -105,7 +88,6 @@ public class CustomerRestApiVerticleTest {
 
     @Test
     public void deleteCustomerByIdTest(Vertx vertx, VertxTestContext vertxTestContext) {
-        WebClient webClient = WebClient.create(vertx, new WebClientOptions().setDefaultPort(CustomerRestApiVerticle.PORT));
         webClient.delete("/customers/1").send().onSuccess(successHandler -> {
             Assertions.assertEquals(HttpResponseStatus.OK.code(), successHandler.statusCode());
             Assertions.assertEquals(HttpHeaderValues.APPLICATION_JSON.toString(), successHandler.getHeader(HttpHeaderNames.CONTENT_TYPE.toString()));

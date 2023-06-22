@@ -1,5 +1,6 @@
 package com.amsidh.vertx.resource;
 
+import com.amsidh.vertx.config.ConfigLoader;
 import com.amsidh.vertx.handlers.*;
 import io.netty.handler.codec.http.HttpResponseStatus;
 import io.vertx.core.AbstractVerticle;
@@ -19,8 +20,6 @@ public class CustomerRestApiVerticle extends AbstractVerticle {
 
     @Override
     public void start(Promise<Void> startPromise) throws Exception {
-        HttpServer httpServer = vertx.createHttpServer();
-
         Router router = Router.router(vertx);
         router.route()
                 .handler(BodyHandler.create())
@@ -37,17 +36,30 @@ public class CustomerRestApiVerticle extends AbstractVerticle {
         //Delete customer
         router.delete("/customers/:id").handler(new DeleteCustomerHandler());
 
+        ConfigLoader.load(vertx)
+                .onFailure(startPromise::fail)
+                .onSuccess(configuration -> {
+                    log.info("Retrieved Configuration ", configuration.encode());
+                    startHttpServer(startPromise, router, configuration);
+                });
+
+
+    }
+
+    private void startHttpServer(Promise<Void> startPromise, Router router, JsonObject configuration) {
+        Integer serverPort = configuration.getInteger(ConfigLoader.SERVER_PORT);
+
+        HttpServer httpServer = vertx.createHttpServer();
         httpServer.requestHandler(router)
                 .exceptionHandler(error -> log.error("HTTP Server error: ", error))
-                .listen(PORT, httpServerAsyncResult -> {
+                .listen(serverPort, httpServerAsyncResult -> {
                     if (httpServerAsyncResult.succeeded()) {
                         startPromise.complete();
-                        log.info("HTTP server started on port {}", httpServer.actualPort());
+                        log.info("HTTP server started on port {} and Application version is {}", httpServer.actualPort(), configuration.getJsonObject("application").getString("version"));
                     } else {
                         startPromise.fail(httpServerAsyncResult.cause());
                     }
                 });
-
     }
 
     private Handler<RoutingContext> handleFailure() {
