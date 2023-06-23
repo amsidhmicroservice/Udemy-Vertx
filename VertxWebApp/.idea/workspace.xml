@@ -95,7 +95,7 @@
         <env name="DB_PASSWORD" value="secret" />
         <env name="DB_PORT" value="5432" />
         <env name="DB_USER" value="postgres" />
-        <env name="SERVER_PORT" value="8888" />
+        <env name="SERVER_PORT" value="80" />
       </envs>
       <option name="MAIN_CLASS_NAME" value="io.vertx.core.Launcher" />
       <module name="VertxWebApp" />
