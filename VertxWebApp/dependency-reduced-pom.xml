@@ -128,7 +128,7 @@
     <maven-shade-plugin.version>3.4.1</maven-shade-plugin.version>
     <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
     <launcher.class>io.vertx.core.Launcher</launcher.class>
-    <main.verticle>com.amsidh.vertx.MainVerticle</main.verticle>
+    <main.verticle>com.amsidh.vertx.verticle.MainVerticle</main.verticle>
     <flyway-core.version>9.19.0</flyway-core.version>
     <maven-surefire-plugin.version>3.1.0</maven-surefire-plugin.version>
     <logback-classic.version>1.2.10</logback-classic.version>

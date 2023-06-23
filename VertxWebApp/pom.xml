@@ -24,7 +24,7 @@
     <jackson-databind.version>2.15.0</jackson-databind.version>
     <lombok.version>1.18.26</lombok.version>
     <launcher.class>io.vertx.core.Launcher</launcher.class>
-    <main.verticle>com.amsidh.vertx.MainVerticle</main.verticle>
+    <main.verticle>com.amsidh.vertx.verticle.MainVerticle</main.verticle>
   </properties>
 
   <dependencyManagement>
@@ -96,6 +96,18 @@
       <groupId>io.vertx</groupId>
       <artifactId>vertx-config-yaml</artifactId>
     </dependency>
+    <!-- Flyway Database migration dependencies-->
+    <dependency>
+      <groupId>org.flywaydb</groupId>
+      <artifactId>flyway-core</artifactId>
+      <version>9.19.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.postgresql</groupId>
+      <artifactId>postgresql</artifactId>
+      <version>42.6.0</version>
+    </dependency>
+
   </dependencies>
 
   <build>

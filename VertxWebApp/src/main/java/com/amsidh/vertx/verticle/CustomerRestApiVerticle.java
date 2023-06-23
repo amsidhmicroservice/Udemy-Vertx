@@ -1,6 +1,7 @@
-package com.amsidh.vertx.resource;
+package com.amsidh.vertx.verticle;
 
 import com.amsidh.vertx.config.ConfigLoader;
+import com.amsidh.vertx.config.CustomerConfig;
 import com.amsidh.vertx.handlers.*;
 import io.netty.handler.codec.http.HttpResponseStatus;
 import io.vertx.core.AbstractVerticle;
@@ -37,23 +38,22 @@ public class CustomerRestApiVerticle extends AbstractVerticle {
         ConfigLoader.load(vertx)
                 .onFailure(startPromise::fail)
                 .onSuccess(configuration -> {
-                    log.info("Retrieved Configuration ", configuration.encode());
+                    log.info("Retrieved Configuration {}", configuration);
                     startHttpServer(startPromise, router, configuration);
                 });
 
 
     }
 
-    private void startHttpServer(Promise<Void> startPromise, Router router, JsonObject configuration) {
-        Integer serverPort = configuration.getJsonObject("server").getInteger("port");
+    private void startHttpServer(Promise<Void> startPromise, Router router, CustomerConfig configuration) {
 
         HttpServer httpServer = vertx.createHttpServer();
         httpServer.requestHandler(router)
                 .exceptionHandler(error -> log.error("HTTP Server error: ", error))
-                .listen(serverPort, httpServerAsyncResult -> {
+                .listen(configuration.getServerPort(), httpServerAsyncResult -> {
                     if (httpServerAsyncResult.succeeded()) {
                         startPromise.complete();
-                        log.info("HTTP server started on port {} and Application version is {}", httpServer.actualPort(), configuration.getJsonObject("application").getString("version"));
+                        log.info("HTTP server started on port {}", httpServer.actualPort());
                     } else {
                         startPromise.fail(httpServerAsyncResult.cause());
                     }

@@ -1,6 +1,5 @@
-package com.amsidh.vertx;
+package com.amsidh.vertx.verticle;
 
-import com.amsidh.vertx.resource.CustomerRestApiVerticle;
 import io.vertx.core.AbstractVerticle;
 import io.vertx.core.DeploymentOptions;
 import io.vertx.core.Future;
@@ -12,7 +11,19 @@ import lombok.extern.slf4j.Slf4j;
 public class MainVerticle extends AbstractVerticle {
     @Override
     public void start(Promise<Void> startPromise) throws Exception {
-        loadCustomerRestApiVerticle(startPromise);
+        deployVersionInfoVerticle(startPromise)
+                .compose(next -> deployDatabaseMigrationVerticle(startPromise))
+                .compose(next -> loadCustomerRestApiVerticle(startPromise));
+    }
+
+    private Future<String> deployVersionInfoVerticle(Promise<Void> startPromise) {
+        return vertx.deployVerticle(VersionInfoVerticle.class.getName()).onFailure(startPromise::fail)
+                .onSuccess(handler -> log.info("Verticle  VersionInfoVerticle id {} deployed successfully!!!", handler));
+    }
+
+    private Future<String> deployDatabaseMigrationVerticle(Promise<Void> startPromise) {
+        return vertx.deployVerticle(FlywayDatabaseMigrationVerticle.class.getName()).onFailure(startPromise::fail)
+                .onSuccess(handler -> log.info("Verticle  FlywayDatabaseMigrationVerticle id {} deployed successfully!!!", handler));
     }
 
     private Future<String> loadCustomerRestApiVerticle(Promise<Void> startPromise) {
