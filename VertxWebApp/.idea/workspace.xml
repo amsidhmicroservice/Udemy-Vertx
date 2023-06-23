@@ -53,7 +53,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/amsid/Downloads/Udemy-Vertx/VertxWebApp",
+    "last_opened_file_path": "C:/Users/amsid/Downloads/Udemy-Vertx/VertxWebApp/src/test/java/com/amsidh/vertx/resource",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -80,6 +80,7 @@
       <recent name="com.amsidh.vertx.config" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\amsid\Downloads\Udemy-Vertx\VertxWebApp\src\test\java\com\amsidh\vertx\resource" />
       <recent name="C:\Users\amsid\Downloads\Udemy-Vertx\VertxWebApp" />
       <recent name="C:\Users\amsid\Downloads\Udemy-Vertx\VertxWebApp\src\main\resources" />
     </key>
@@ -104,101 +105,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomerRestApiVerticleTestAbstract" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="VertxWebApp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.amsidh.vertx.resource.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.amsidh.vertx.resource" />
-      <option name="MAIN_CLASS_NAME" value="com.amsidh.vertx.resource.CustomerRestApiVerticleTestAbstract" />
-      <option name="METHOD_NAME" value="saveCustomerTest(io.vertx.core.Vertx,io.vertx.junit5.VertxTestContext)" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="create-customer | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/src/test/java/com/amsidh/vertx/resource/create-customer.http" requestIdentifier="#1" runType="Run single request">
+      <method v="2" />
     </configuration>
-    <configuration name="CustomerRestApiVerticleTestAbstract.deleteCustomerByIdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="VertxWebApp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.amsidh.vertx.resource.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.amsidh.vertx.resource" />
-      <option name="MAIN_CLASS_NAME" value="com.amsidh.vertx.resource.CustomerRestApiVerticleTestAbstract" />
-      <option name="METHOD_NAME" value="deleteCustomerByIdTest(io.vertx.core.Vertx,io.vertx.junit5.VertxTestContext)" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="delete-customerbyid | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/src/test/java/com/amsidh/vertx/resource/delete-customerbyid.http" requestIdentifier="#1" runType="Run single request">
+      <method v="2" />
     </configuration>
-    <configuration name="CustomerRestApiVerticleTestAbstract.getAllCustomerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="VertxWebApp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.amsidh.vertx.resource.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.amsidh.vertx.resource" />
-      <option name="MAIN_CLASS_NAME" value="com.amsidh.vertx.resource.CustomerRestApiVerticleTestAbstract" />
-      <option name="METHOD_NAME" value="getAllCustomerTest(io.vertx.core.Vertx,io.vertx.junit5.VertxTestContext)" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="get-all-customer | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/src/test/java/com/amsidh/vertx/resource/get-all-customer.http" requestIdentifier="#1" runType="Run single request">
+      <method v="2" />
     </configuration>
-    <configuration name="CustomerRestApiVerticleTestAbstract.getCustomerByIdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="VertxWebApp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.amsidh.vertx.resource.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.amsidh.vertx.resource" />
-      <option name="MAIN_CLASS_NAME" value="com.amsidh.vertx.resource.CustomerRestApiVerticleTestAbstract" />
-      <option name="METHOD_NAME" value="getCustomerByIdTest(io.vertx.core.Vertx,io.vertx.junit5.VertxTestContext)" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="get-customerbyid | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/src/test/java/com/amsidh/vertx/resource/get-customerbyid.http" requestIdentifier="#1" runType="Run single request">
+      <method v="2" />
     </configuration>
-    <configuration name="CustomerRestApiVerticleTestAbstract.putCustomerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="VertxWebApp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.amsidh.vertx.resource.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.amsidh.vertx.resource" />
-      <option name="MAIN_CLASS_NAME" value="com.amsidh.vertx.resource.CustomerRestApiVerticleTestAbstract" />
-      <option name="METHOD_NAME" value="putCustomerTest(io.vertx.core.Vertx,io.vertx.junit5.VertxTestContext)" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="update-customer | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/src/test/java/com/amsidh/vertx/resource/update-customer.http" requestIdentifier="#1" runType="Run single request">
+      <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Application.MainVerticleLauncher" />
-      <item itemvalue="JUnit.CustomerRestApiVerticleTestAbstract.getAllCustomerTest" />
-      <item itemvalue="JUnit.CustomerRestApiVerticleTestAbstract" />
-      <item itemvalue="JUnit.CustomerRestApiVerticleTestAbstract.deleteCustomerByIdTest" />
-      <item itemvalue="JUnit.CustomerRestApiVerticleTestAbstract.getCustomerByIdTest" />
-      <item itemvalue="JUnit.CustomerRestApiVerticleTestAbstract.putCustomerTest" />
+      <item itemvalue="HTTP Request.create-customer | #1" />
+      <item itemvalue="HTTP Request.delete-customerbyid | #1" />
+      <item itemvalue="HTTP Request.get-all-customer | #1" />
+      <item itemvalue="HTTP Request.get-customerbyid | #1" />
+      <item itemvalue="HTTP Request.update-customer | #1" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CustomerRestApiVerticleTestAbstract.getAllCustomerTest" />
-        <item itemvalue="JUnit.CustomerRestApiVerticleTestAbstract" />
-        <item itemvalue="JUnit.CustomerRestApiVerticleTestAbstract.getCustomerByIdTest" />
-        <item itemvalue="JUnit.CustomerRestApiVerticleTestAbstract.deleteCustomerByIdTest" />
-        <item itemvalue="JUnit.CustomerRestApiVerticleTestAbstract.putCustomerTest" />
+        <item itemvalue="HTTP Request.update-customer | #1" />
+        <item itemvalue="HTTP Request.get-all-customer | #1" />
+        <item itemvalue="HTTP Request.delete-customerbyid | #1" />
+        <item itemvalue="HTTP Request.create-customer | #1" />
+        <item itemvalue="HTTP Request.get-customerbyid | #1" />
       </list>
     </recent_temporary>
   </component>

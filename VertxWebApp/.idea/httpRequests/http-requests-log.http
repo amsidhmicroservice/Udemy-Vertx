@@ -1,0 +1,145 @@
+PUT http://localhost/customers/14
+Content-Type: application/json
+Content-Length: 29
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+ "name":"Anjali Lokhande"
+}
+
+###
+
+GET http://localhost/customers
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-24T013656.200.json
+
+###
+
+DELETE http://localhost/customers/12
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-24T011833.200.json
+
+###
+
+DELETE http://localhost/customers/11
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-24T011827.200.json
+
+###
+
+GET http://localhost/customers
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-24T011748.200.json
+
+###
+
+POST http://localhost/customers
+Content-Type: application/json
+Content-Length: 20
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+ "name":"Anjali"
+}
+
+<> 2023-06-24T011741.201.json
+
+###
+
+POST http://localhost/customers
+Content-Type: application/json
+Content-Length: 20
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+ "name":"Aditya"
+}
+
+<> 2023-06-24T011733.201.json
+
+###
+
+POST http://localhost/customers
+Content-Type: application/json
+Content-Length: 20
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+ "name":"Adithi"
+}
+
+<> 2023-06-24T011727.201.json
+
+###
+
+GET http://localhost/customers
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-24T011652.200.json
+
+###
+
+GET http://localhost/customers/11
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-24T011619.200.json
+
+###
+
+GET http://localhost/customers/11
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-24T011607.200.json
+
+###
+
+GET http://localhost/customers/1
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-24T011554.200.json
+
+###
+
+POST http://localhost/customers
+Content-Type: application/json
+Content-Length: 20
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+ "name":"Amsidh"
+}
+
+<> 2023-06-24T011504.201.json
+
+###
+
