@@ -9,6 +9,7 @@ import io.vertx.core.http.HttpHeaders;
 import io.vertx.core.json.Json;
 import io.vertx.core.json.JsonObject;
 import io.vertx.ext.web.RoutingContext;
+import io.vertx.sqlclient.Pool;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.Optional;
@@ -16,6 +17,11 @@ import java.util.Optional;
 @Slf4j
 public class PutCustomerHandler implements Handler<RoutingContext> {
     CustomerService customerService = new CustomerServiceImpl();
+    Pool pool;
+
+    public PutCustomerHandler(Pool pool) {
+        this.pool = pool;
+    }
 
     @Override
     public void handle(RoutingContext routingContext) {

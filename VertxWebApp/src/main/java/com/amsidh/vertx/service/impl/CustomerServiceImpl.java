@@ -2,13 +2,10 @@ package com.amsidh.vertx.service.impl;
 
 import com.amsidh.vertx.model.Customer;
 import com.amsidh.vertx.service.CustomerService;
+import io.vertx.pgclient.PgPool;
 import lombok.extern.slf4j.Slf4j;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
-import java.util.stream.Collectors;
+import java.util.*;
 
 @Slf4j
 public class CustomerServiceImpl implements CustomerService {
@@ -64,7 +61,8 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public List<Customer> getAllCustomer() {
-        return customers.entrySet().stream().map(entry -> entry.getValue()).collect(Collectors.toList());
+    public List<Customer> getAllCustomer(PgPool pgPool) {
+        List<Customer> customers = new ArrayList<>();
+        return customers;
     }
 }

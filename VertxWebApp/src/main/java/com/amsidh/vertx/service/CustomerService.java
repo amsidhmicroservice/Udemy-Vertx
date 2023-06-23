@@ -1,6 +1,7 @@
 package com.amsidh.vertx.service;
 
 import com.amsidh.vertx.model.Customer;
+import io.vertx.pgclient.PgPool;
 
 import java.util.List;
 import java.util.Optional;
@@ -14,6 +15,6 @@ public interface CustomerService {
 
     Optional<Customer> deleteCustomerById(Long id);
 
-    List<Customer> getAllCustomer();
+    List<Customer> getAllCustomer(PgPool pgPool);
 
 }

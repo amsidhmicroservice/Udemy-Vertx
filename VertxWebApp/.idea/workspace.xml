@@ -87,7 +87,7 @@
       <recent name="com.amsidh.vertx.handlers" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CustomerRestApiVerticleTestAbstract.getAllCustomerTest">
+  <component name="RunManager" selected="Application.MainVerticleLauncher">
     <configuration name="MainVerticleLauncher" type="Application" factoryName="Application">
       <envs>
         <env name="DB_DATABASE" value="customerdb" />
@@ -220,41 +220,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/amsidh/vertx/resource/CustomerRestApiVerticleTestAbstract.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/amsidh/vertx/resource/CustomerRestApiVerticleTestAbstract.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/amsidh/vertx/resource/CustomerRestApiVerticleTestAbstract.java</url>
-          <line>54</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/amsidh/vertx/resource/CustomerRestApiVerticleTestAbstract.java</url>
-          <line>57</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/amsidh/vertx/resource/CustomerRestApiVerticleTestAbstract.java</url>
-          <line>97</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/amsidh/vertx/verticle/CustomerRestApiVerticle.java</url>
-          <line>39</line>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
