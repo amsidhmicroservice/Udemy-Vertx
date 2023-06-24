@@ -22,16 +22,18 @@ public class FlywayDatabaseMigrationVerticle extends AbstractVerticle {
 
     @Override
     public void start(Promise<Void> startPromise) throws Exception {
-        ConfigLoader.load(vertx).onFailure(startPromise::fail).onSuccess(configuration -> {
-            vertx.executeBlocking(promise -> {
-                        databaseMigration(configuration);
-                    }).onFailure(error -> log.error("Failed to migrate DB schema with error {}", error))
-                    .onSuccess(handle -> {
-                        log.info("Database schema migration is success!!!");
-                        startPromise.complete();
-                    });
-            startPromise.complete();
-        });
+        ConfigLoader.load(vertx)
+                .onFailure(startPromise::fail)
+                .onSuccess(configuration -> {
+                    vertx.executeBlocking(promise -> {
+                                databaseMigration(configuration);
+                            }).onFailure(error -> log.error("Failed to migrate DB schema with error {}", error))
+                            .onSuccess(handle -> {
+                                log.info("Database schema migration is success!!!");
+                                startPromise.complete();
+                            });
+                    startPromise.complete();
+                });
     }
 
     private static void databaseMigration(CustomerConfig configuration) {

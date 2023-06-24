@@ -1,0 +1,9 @@
+http_server_port: 8088
+
+db_host: localhost
+db_port: 3306
+db_database: employeedb
+db_url: jdbc:mysql://localhost:3306/employeedb
+db_username: root
+db_password: tiger
+flyway_logger: slf4j
