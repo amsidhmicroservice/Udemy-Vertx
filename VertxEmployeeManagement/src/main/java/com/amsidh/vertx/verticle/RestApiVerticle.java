@@ -3,7 +3,7 @@ package com.amsidh.vertx.verticle;
 import com.amsidh.vertx.config.ConfigLoader;
 import com.amsidh.vertx.config.ConfigModel;
 import com.amsidh.vertx.config.DatabaseConfigModel;
-import com.amsidh.vertx.handlers.GetAllEmployeeHandler;
+import com.amsidh.vertx.handlers.*;
 import io.netty.handler.codec.http.HttpHeaderNames;
 import io.netty.handler.codec.http.HttpHeaderValues;
 import io.netty.handler.codec.http.HttpResponseStatus;
@@ -34,11 +34,10 @@ public class RestApiVerticle extends AbstractVerticle {
         //For any failed request
         router.route()
           .handler(BodyHandler.create())
-          .failureHandler(errorContext -> handleErrorRequest(startPromise, errorContext, "Something went wrong " + errorContext.failure().getMessage()));
+          .failureHandler(errorContext -> handleErrorRequest(errorContext, "Something went wrong " + errorContext.failure().getMessage()));
 
-        //Fetch All employee
-        router.get("/employees").handler(new GetAllEmployeeHandler(pool));
-
+        //Configure All routes
+        getRouters(pool, router);
 
         startHttpServer(startPromise, router, configModel);
       })
@@ -56,6 +55,15 @@ public class RestApiVerticle extends AbstractVerticle {
       });
   }
 
+  private static void getRouters(Pool pool, Router router) {
+    //Fetch All employee
+    router.get("/employees").handler(new GetAllEmployeeHandler(pool));
+    router.get("/employees/:employeeId").handler(new GetEmployeeByIdHandler(pool));
+    router.post("/employees").handler(new SaveEmployeeHandler(pool));
+    router.put("/employees/:employeeId").handler(new UpdateEmployeeHandler(pool));
+    router.delete("/employees/:employeeId").handler(new DeleteEmployeeHandler(pool));
+  }
+
   private Pool getPool(ConfigModel configModel) {
     //Create Pool for database
     DatabaseConfigModel databaseConfigModel = configModel.getDatabaseConfigModel();
@@ -70,9 +78,8 @@ public class RestApiVerticle extends AbstractVerticle {
   }
 
 
-  private static void handleErrorRequest(Promise<Void> startPromise, RoutingContext routingContext, String errorMessage) {
+  private static void handleErrorRequest(RoutingContext routingContext, String errorMessage) {
     handleErrorResponseTemplate(routingContext, errorMessage);
-    startPromise.complete();
   }
 
   public static void handleErrorResponseTemplate(RoutingContext routingContext, String errorMessage) {

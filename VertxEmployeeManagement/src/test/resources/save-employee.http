@@ -1,0 +1,40 @@
+### Post Employee Request
+POST http://localhost:8088/employees
+Content-Type: application/json
+
+{
+  "employeeName": "Amsidh",
+  "emailId": "amsidhlokhande@gmail.com",
+  "salary": 24050.56
+}
+
+
+### Post Employee Request
+POST http://localhost:8088/employees
+Content-Type: application/json
+
+{
+  "employeeName": "Anjali",
+  "emailId": "anjalilokhande@gmail.com",
+  "salary": 8978.56
+}
+
+### Post Employee Request
+POST http://localhost:8088/employees
+Content-Type: application/json
+
+{
+  "employeeName": "Adithi",
+  "emailId": "adithilokhande@gmail.com",
+  "salary": 100.56
+}
+
+### Post Employee Request
+POST http://localhost:8088/employees
+Content-Type: application/json
+
+{
+"employeeName": "Aditya",
+"emailId": "adityalokhande@gmail.com",
+"salary": 2450.56
+}

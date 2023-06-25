@@ -1,0 +1,3 @@
+{
+  "message": "Request failed due to some error Failed to update employee with id 1 sql query failed with reason {errorMessage=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'emailId=? salary=? where id=?' at line 1, errorCode=1064, sqlState=42000}"
+}

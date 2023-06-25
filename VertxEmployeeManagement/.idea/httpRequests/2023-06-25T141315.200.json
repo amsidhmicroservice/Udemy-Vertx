@@ -1,0 +1,26 @@
+[
+  {
+    "id": 2,
+    "name": "Amsidh",
+    "emailId": "amsidhlokhande@gmail.com",
+    "salary": 24050.56
+  },
+  {
+    "id": 3,
+    "name": "Anjali",
+    "emailId": "anjalilokhande@gmail.com",
+    "salary": 8978.56
+  },
+  {
+    "id": 4,
+    "name": "Adithi",
+    "emailId": "adithilokhande@gmail.com",
+    "salary": 100.56
+  },
+  {
+    "id": 5,
+    "name": "Aditya",
+    "emailId": "adityalokhande@gmail.com",
+    "salary": 2450.56
+  }
+]

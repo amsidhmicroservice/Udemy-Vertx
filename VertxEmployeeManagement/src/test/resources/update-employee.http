@@ -1,0 +1,8 @@
+PUT http://localhost:8088/employees/2
+Content-Type: application/json
+
+{
+  "employeeName": "Amsidh Lokhande",
+  "emailId": "amsidhlokhande@gmail.com",
+  "salary": 590.50
+}

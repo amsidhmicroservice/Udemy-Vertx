@@ -1,0 +1,384 @@
+GET http://localhost:8088/employees
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-25T142151.200.json
+
+###
+
+PUT http://localhost:8088/employees/2
+Content-Type: application/json
+Content-Length: 100
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "employeeName": "Amsidh Lokhande",
+  "emailId": "amsidhlokhande@gmail.com",
+  "salary": 590.50
+}
+
+###
+
+GET http://localhost:8088/employees
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-25T142114.200.json
+
+###
+
+PUT http://localhost:8088/employees/1
+Content-Type: application/json
+Content-Length: 101
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "employeeName": "Amsidh Lokhande",
+  "emailId": "amsidh.lokhande@gmail.com",
+  "salary": 590.50
+}
+
+###
+
+GET http://localhost:8088/employees/2
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-25T142024.200.json
+
+###
+
+GET http://localhost:8088/employees
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-25T142013.200.json
+
+###
+
+GET http://localhost:8088/employees
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-25T141347.200.json
+
+###
+
+GET http://localhost:8088/employees/2
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-25T141339.200.json
+
+###
+
+GET http://localhost:8088/employees/2
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-25T141329.200.json
+
+###
+
+GET http://localhost:8088/employees/1
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-25T141321.200.json
+
+###
+
+GET http://localhost:8088/employees
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-25T141315.200.json
+
+###
+
+DELETE http://localhost:8088/employees/1
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-25T141243.200.json
+
+###
+
+DELETE http://localhost:8088/employees/1
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-25T141056.500.json
+
+###
+
+DELETE http://localhost:8088/employees/1
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-25T140730.500.json
+
+###
+
+POST http://localhost:8088/employees
+Content-Type: application/json
+Content-Length: 86
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+"employeeName": "Aditya",
+"emailId": "adityalokhande@gmail.com",
+"salary": 2450.56
+}
+
+<> 2023-06-25T140454.201.json
+
+###
+
+POST http://localhost:8088/employees
+Content-Type: application/json
+Content-Length: 91
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "employeeName": "Adithi",
+  "emailId": "adithilokhande@gmail.com",
+  "salary": 100.56
+}
+
+<> 2023-06-25T140453-2.201.json
+
+###
+
+POST http://localhost:8088/employees
+Content-Type: application/json
+Content-Length: 92
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "employeeName": "Anjali",
+  "emailId": "anjalilokhande@gmail.com",
+  "salary": 8978.56
+}
+
+<> 2023-06-25T140453-1.201.json
+
+###
+
+POST http://localhost:8088/employees
+Content-Type: application/json
+Content-Length: 93
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "employeeName": "Amsidh",
+  "emailId": "amsidhlokhande@gmail.com",
+  "salary": 24050.56
+}
+
+<> 2023-06-25T140453.201.json
+
+###
+
+PUT http://localhost:8088/employees/1
+Content-Type: application/json
+Content-Length: 101
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "employeeName": "Amsidh Lokhande",
+  "emailId": "amsidh.lokhande@gmail.com",
+  "salary": 590.50
+}
+
+###
+
+PUT http://localhost:8088/employees/1
+Content-Type: application/json
+Content-Length: 101
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "employeeName": "Amsidh Lokhande",
+  "emailId": "amsidh.lokhande@gmail.com",
+  "salary": 580.50
+}
+
+###
+
+PUT http://localhost:8088/employees/1
+Content-Type: application/json
+Content-Length: 101
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "employeeName": "Amsidh Lokhande",
+  "emailId": "amsidh.lokhande@gmail.com",
+  "salary": 580.50
+}
+
+<> 2023-06-25T134226.500.json
+
+###
+
+PUT http://localhost:8088/employees/1
+Content-Type: application/json
+Content-Length: 101
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "employeeName": "Amsidh Lokhande",
+  "emailId": "amsidh.lokhande@gmail.com",
+  "salary": 580.50
+}
+
+<> 2023-06-25T134025.500.json
+
+###
+
+PUT http://localhost:8088/employees/1
+Content-Type: application/json
+Content-Length: 81
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "employeeName": "Amsidh Lokhande",
+  "emailId": "amsidh.lokhande@gmail.com"
+}
+
+###
+
+PUT http://localhost:8088/employees/1
+Content-Type: application/json
+Content-Length: 101
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "employeeName": "Amsidh Lokhande",
+  "emailId": "amsidh.lokhande@gmail.com",
+  "salary": 580.50
+}
+
+###
+
+POST http://localhost:8088/employees
+Content-Type: application/json
+Content-Length: 91
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "employeeName": "Amsidh",
+  "emailId": "amsidhlokhande@gmail.com",
+  "salary": 324.56
+}
+
+<> 2023-06-25T101726.201.json
+
+###
+
+POST http://localhost:8088/employees
+Content-Type: application/json
+Content-Length: 91
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "employeeName": "Amsidh",
+  "emailId": "amsidhlokhande@gmail.com",
+  "salary": 324.56
+}
+
+<> 2023-06-25T101328.500.json
+
+###
+
+POST http://localhost:8088/employees
+Content-Type: application/json
+Content-Length: 91
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "employeeName": "Amsidh",
+  "emailId": "amsidhlokhande@gmail.com",
+  "salary": 324.56
+}
+
+<> 2023-06-25T100640.500.json
+
+###
+
+POST http://localhost:8088/employees
+Content-Type: application/json
+Content-Length: 91
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "employeeName": "Amsidh",
+  "emailId": "amsidhlokhande@gmail.com",
+  "salary": 324.56
+}
+
+<> 2023-06-25T100446.500.json
+
+###
+
+POST http://localhost:8088/employees
+Content-Type: application/json
+Content-Length: 91
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "employeeName": "Amsidh",
+  "emailId": "amsidhlokhande@gmail.com",
+  "salary": 324.56
+}
+
+<> 2023-06-25T100136.500.json
+
+###
+
